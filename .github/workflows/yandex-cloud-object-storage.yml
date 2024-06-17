@@ -14,9 +14,9 @@ jobs:
         working-directory: ./frontend
     steps:
       - name: Checkout
-        uses: actions/checkout@4
+        uses: actions/checkout@v4
       - name: Set up node
-        uses: actions/setup-node@4
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
@@ -50,10 +50,10 @@ jobs:
           VITE_PARSING_LANG_SMITH_URL: ${{ vars.PARSING_LANG_SMITH_URL }}
           VITE_SUMMARIZING_LANG_SMITH_URL: ${{ vars.SUMMARIZING_LANG_SMITH_URL }}
       - name: Deploy
-        uses: nekitcorp/yandex-storage-website-action@v1
+        uses: nekitcorp/yandex-storage-website-action@v2
         with:
-          accessKeyId: ${{ secrets.FRONTEND_DEPLOY_ACCESS_KEY_ID }}
-          secretAccessKey: ${{ secrets.FRONTEND_DEPLOY_SECRET_ACCESS_KEY }}
+          access-key-id: ${{ secrets.FRONTEND_DEPLOY_ACCESS_KEY_ID }}
+          secret-access-key: ${{ secrets.FRONTEND_DEPLOY_SECRET_ACCESS_KEY }}
           bucket: ${{ secrets.FRONTEND_BUCKET }}
-          path: "./dist"
+          working-directory: frontend/dist
           clear: true
