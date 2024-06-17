@@ -8,3 +8,4 @@ export const RANKED_BAD_NEWS_TABLE_URL: string = import.meta.env.VITE_RANKED_BAD
 export const PARSING_LANG_SMITH_URL: string = import.meta.env.VITE_PARSING_LANG_SMITH_URL || 'https://smith.langchain.com';
 export const RANKING_LANG_SMITH_URL: string = import.meta.env.VITE_RANKING_LANG_SMITH_URL || 'https://smith.langchain.com';
 export const SUMMARIZING_LANG_SMITH_URL: string = import.meta.env.VITE_SUMMARIZING_LANG_SMITH_URL || 'https://smith.langchain.com';
+export const API_BASE_URL: string = import.meta.env.VITE_API_BASE_URL || 'https://api.banz-ai.ru';

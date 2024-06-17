@@ -1,5 +1,6 @@
 import { Api } from '../../generated-api/Api';
-const api = new Api({baseUrl: 'https://api.banz-ai.ru'});
+import { API_BASE_URL } from '@/utils/env-variable-loader';
+const api = new Api({baseUrl: API_BASE_URL});
 const sendMail = api.sendMail.sendMail
 async function runParsing () {
     const resp = await Promise.all(

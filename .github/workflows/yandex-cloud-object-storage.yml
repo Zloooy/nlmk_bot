@@ -49,6 +49,7 @@ jobs:
           VITE_RANKING_LANG_SMITH_URL: ${{ vars.RANKING_LANG_SMITH_URL }}
           VITE_PARSING_LANG_SMITH_URL: ${{ vars.PARSING_LANG_SMITH_URL }}
           VITE_SUMMARIZING_LANG_SMITH_URL: ${{ vars.SUMMARIZING_LANG_SMITH_URL }}
+          VITE_API_BASE_URL: ${{ vars.API_BASE_URL }}
       - name: Deploy
         uses: nekitcorp/yandex-storage-website-action@v2
         with:

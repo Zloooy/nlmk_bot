@@ -1,10 +1,9 @@
 openapi: 3.0.0
 info:
-  title: BanzAI API
+  title: NLMK Bot API
   version: 1.0.0
 servers:
-- url: https://d5d9nn492nbmsndr18m7.apigw.yandexcloud.net
-- url: https://api.banz-ai.ru
+- url: https://d5d6noeirndg6cd1bic3.apigw.yandexcloud.net
 paths:
   /recipients:
     x-yc-apigateway-cors:
@@ -169,7 +168,9 @@ components:
       type: object
   x-yc-apigateway-cors-rules:
       cors-rule:
-        origin: '*'
+        origin:
+          - http://nlmk-bot.website.yandexcloud.net
+          - http://*.nlmk-bot.website.yandexcloud.net
         methods:
           - GET
           - POST

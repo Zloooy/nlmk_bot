@@ -36,11 +36,12 @@
 </template>
 <script setup lang="ts">
 import { Api } from '../../generated-api/Api';
+import { API_BASE_URL } from '@/utils/env-variable-loader';
 
 const recipients = ref([]);
 const loading = ref(false);
 const newRecipientEmail: Ref<string | null> = ref(null);
-const api = new Api({baseUrl: 'https://api.banz-ai.ru'});
+const api = new Api({baseUrl: API_BASE_URL});
 async function getRecipients(){
     loading.value = true;
     try {

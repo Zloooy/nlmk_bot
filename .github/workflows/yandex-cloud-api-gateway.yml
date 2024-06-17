@@ -1,0 +1,25 @@
+name: Deploy gateway
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - backend/api-scheme.yaml
+jobs:
+  deploy-gateway:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./backend
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Deploy gateway
+        id: deploy-gateway
+        uses: yc-actions/yc-api-gateway-deploy@v2
+        with:
+          yc-sa-json-credentials: ${{ secrets.GATEWAY_JSON_CREDENTIALS }}
+          gateway-name: ${{ secrets.GATEWAY }}
+          folder-id: ${{ secrets.GATEWAY_FOLDER_ID}}
+          spec-file: backend/api-scheme.yaml
