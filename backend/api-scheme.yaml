@@ -110,16 +110,6 @@ paths:
         timeouts:
           connect: 0.5
           read: 5
-  /run_rss:
-    x-yc-apigateway-cors:
-      $ref: "#/components/x-yc-apigateway-cors-rules/cors-rule"
-    get:
-      x-yc-apigateway-integration:
-        type: http
-        url: "${var.RUN_RSS_URL}"
-        timeouts:
-          connect: 0.5
-          read: 5
   /run_scrape:
     x-yc-apigateway-cors:
       $ref: "#/components/x-yc-apigateway-cors-rules/cors-rule"
@@ -193,9 +183,6 @@ x-yc-apigateway:
       default: ''
       type: string
     RUN_GRADE_URL:
-      default: ''
-      type: string
-    RUN_RSS_URL:
       default: ''
       type: string
     RUN_SCRAPE_URL:
