@@ -2,14 +2,7 @@ import { Api } from '../../generated-api/Api';
 import { API_BASE_URL } from '@/utils/env-variable-loader';
 const api = new Api({baseUrl: API_BASE_URL});
 const sendMail = api.sendMail.sendMail
-async function runParsing () {
-    const resp = await Promise.all(
-        [
-        api.runScrape.runScrapeList(),
-        api.runRss.runRssList()
-        ]);
-    return resp
-}
+const runParsing = api.runScrape.runScrapeList;
 type SitePage = {
     title: string
     icon?: string
