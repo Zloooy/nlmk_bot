@@ -1,0 +1,18 @@
+{
+    "host": "127.0.0.1",
+    "port": 35474,
+    "token": "",
+    "LANGCHAIN_API_KEY": "",
+    "OPENAI_API_KEY": "",
+    "LANGCHAIN_ENDPOINT": "https://api.smith.langchain.com",
+    "LANGCHAIN_PROJECT": "nlmk_bot",
+    "LANGCHAIN_TRACING_V2": "true",
+    "google_sheet_key_path": "",
+    "gsheet_handler_lib_path": "",
+    "ai_parse_prompt": "mlenparrot/nlmk_aiparse",
+    "grade_prompt": "mlenparrot/nlmk_grade",
+    "summarization_prompt": "mlenparrot/nlmk_summary",
+    "PARSING_SITES_TABLE_URL": "https://docs.google.com/spreadsheets/d/1BA1nioQqc048FFvKXcpP5VqL_73kXNCcSx0m-jhI2MQ/edit#gid=0",
+    "RANKED_NEWS_TABLE_URL": "https://docs.google.com/spreadsheets/d/1cIB0yjbP-uInz7k0rs7zRruyct7C3Cks3P7DUGZTFlc/edit?gid=0#gid=0",
+    "DIGEST_DOCUMENT_ID": "1Rtfhw54kpkmuPmA7xpt9CVx5J_70kMiL636MQzl3dck"
+}
